@@ -3,3 +3,13 @@ jdk:
   - oraclejdk8
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONARQUBE_TOKEN
+deploy:
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: 303709827@qq.com
+  password:
+    secure: Mh2ms76qgp3qBjVixnLJ
+  organization: iHatebug
+  space: development
+  on:
+    repo: iHatebug/spring-boot
