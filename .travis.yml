@@ -8,7 +8,7 @@ script:
 #  api: https://api.run.pivotal.io
 #  username: 303709827@qq.com
 #  password:
-#    secure: Mh2ms76qgp3qBjVixnLJ
+#    secure:
 #  organization: iHatebug
 #  space: development
 #  on:
