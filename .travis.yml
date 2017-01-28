@@ -11,4 +11,4 @@ deploy:
   organization: iHatebug
   space: development
   on:
-    repo: iHatebug/spring-boot
+    repo: iHatebug/hanze-spring-boot
