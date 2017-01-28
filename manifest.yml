@@ -1,5 +1,5 @@
 ---
 applications:
-- name: spring-boot
+- name: hanze-spring-boot
   memory: 512M
   path: target/spring-boot-1.0.0.war
