@@ -1,4 +1,7 @@
 # Spring Boot Demo
+Integration with Travis,Sonarqube,Pivotal
+
+
 [![Build Status](https://travis-ci.org/iHatebug/spring-boot.svg?branch=master)](https://travis-ci.org/iHatebug/spring-boot)
 [![Quality Gate](https://sonarqube.com/api/badges/gate?key=com.hanze:spring-boot)](https://sonarqube.com/dashboard/index/com.hanze:spring-boot)
 [![Coverage](https://sonarqube.com/api/badges/measure?key=com.hanze:spring-boot&metric=coverage)](https://sonarqube.com/dashboard/index/com.hanze:spring-boot)
