@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.math.BigDecimal;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
 
 /**
  * Created by Hanze on 12/02/2017.

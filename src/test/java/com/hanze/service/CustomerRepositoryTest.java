@@ -4,10 +4,7 @@ import com.hanze.SpringBootSampleTest;
 import com.hanze.domain.Customer;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
@@ -30,7 +27,7 @@ public class CustomerRepositoryTest extends SpringBootSampleTest{
     }
 
     @Test
-    public void shouldFindCustomerByName(){
+    public void shouldFindCustomerByName() throws Exception{
         List<Customer> customerList = customerRepository.findByName("Hanze");
         assertThat("1234567890".equals(customerList.get(0).getPhone()));
     }

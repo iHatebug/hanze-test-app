@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Set;
 
 /**
  * Created by Hanze on 12/02/2017.
@@ -31,6 +32,9 @@ public class Room implements Serializable{
     @Column(name = "ROOM_TYPE")
     private RoomType roomType;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "room")
+    private Set<Item> items;
+
     public String getRoomNo() {
         return roomNo;
     }
@@ -53,5 +57,13 @@ public class Room implements Serializable{
 
     public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
+    }
+
+    public Set<Item> getOrders() {
+        return items;
+    }
+
+    public void setOrders(Set<Item> items) {
+        this.items = items;
     }
 }
