@@ -1,6 +1,7 @@
 package com.hanze.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Calendar;
@@ -23,8 +24,20 @@ public class Customer implements Serializable {
     @Column(name="NAME")
     private String name;
 
+    @Min(value = 18, message = "Adult only!")
+    @Column(name = "AGE")
+    private Integer age;
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     @NotNull
-    @Column(name="EMAIL")
+    @Column(name="PHONE")
     private String phone;
 
     @Column(name="CHECK_IN_DATE")
@@ -35,10 +48,6 @@ public class Customer implements Serializable {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -71,5 +80,16 @@ public class Customer implements Serializable {
 
     public void setCheckOutDate(Calendar checkOutDate) {
         this.checkOutDate = checkOutDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", phone='" + phone + '\'' +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                '}';
     }
 }
